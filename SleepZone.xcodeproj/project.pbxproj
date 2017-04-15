@@ -210,6 +210,7 @@
 				TargetAttributes = {
 					B29AE0A11EA1CC7C0015178B = {
 						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = T4HS2W5NW6;
 						ProvisioningStyle = Automatic;
 					};
 					B29AE0BD1EA1CC7C0015178B = {
@@ -430,6 +431,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = T4HS2W5NW6;
 				INFOPLIST_FILE = SleepZone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.newschoololdschool.SleepZone;
@@ -441,6 +443,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = T4HS2W5NW6;
 				INFOPLIST_FILE = SleepZone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.newschoololdschool.SleepZone;
