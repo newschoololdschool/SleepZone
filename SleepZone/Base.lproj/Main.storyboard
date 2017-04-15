@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--#SleepZone-->
+        <!--SleepZone-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
@@ -21,17 +21,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wCJ-E1-AaZ" userLabel="Nav Container View">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wCJ-E1-AaZ" userLabel="Center Container View">
                                 <rect key="frame" x="87.5" y="164" width="200" height="403"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Be-YS-75z" userLabel="Shh Container View">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Be-YS-75z" userLabel="Shusher Container View">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                         <subviews>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zm9-tI-Sch">
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zm9-tI-Sch">
                                                 <rect key="frame" x="75" y="85" width="51" height="31"/>
-                                                <connections>
-                                                    <action selector="shusherSwitchValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="ohc-K4-znP"/>
-                                                </connections>
                                             </switch>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SHHH" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AGn-Ii-apm">
                                                 <rect key="frame" x="0.0" y="127" width="200" height="21"/>
@@ -54,11 +51,8 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pAv-ml-dCO" userLabel="Rain Container View">
                                         <rect key="frame" x="0.0" y="203" width="200" height="200"/>
                                         <subviews>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TKh-5O-1A1">
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TKh-5O-1A1">
                                                 <rect key="frame" x="75" y="85" width="51" height="31"/>
-                                                <connections>
-                                                    <action selector="rainSwitchValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="ulr-an-6fk"/>
-                                                </connections>
                                             </switch>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RAIN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="su4-db-lVj" userLabel="RAIN">
                                                 <rect key="frame" x="0.0" y="127" width="200" height="21"/>
@@ -97,9 +91,11 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="wCJ-E1-AaZ" secondAttribute="bottom" constant="100" id="rYB-Y7-pBu"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="#SleepZone" id="13x-LA-dIl"/>
+                    <navigationItem key="navigationItem" title="SleepZone" id="13x-LA-dIl"/>
                     <connections>
+                        <outlet property="rainContainerView" destination="pAv-ml-dCO" id="Vx3-5H-xkA"/>
                         <outlet property="rainSwitch" destination="TKh-5O-1A1" id="uWa-uW-LP1"/>
+                        <outlet property="shusherContainerView" destination="9Be-YS-75z" id="Oof-g8-KgB"/>
                         <outlet property="shusherSwitch" destination="Zm9-tI-Sch" id="5xM-m6-08W"/>
                     </connections>
                 </viewController>
