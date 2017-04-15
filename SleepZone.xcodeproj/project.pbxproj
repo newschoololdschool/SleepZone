@@ -16,6 +16,8 @@
 		B29AE0B81EA1CC7C0015178B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B29AE0B61EA1CC7C0015178B /* LaunchScreen.storyboard */; };
 		B29AE0C31EA1CC7C0015178B /* SleepZoneTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B29AE0C21EA1CC7C0015178B /* SleepZoneTests.m */; };
 		B29AE0CE1EA1CC7C0015178B /* SleepZoneUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B29AE0CD1EA1CC7C0015178B /* SleepZoneUITests.m */; };
+		B29AE0DE1EA1DADA0015178B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B29AE0DD1EA1DADA0015178B /* AVFoundation.framework */; };
+		B29AE0E11EA1DBF90015178B /* shh.m4a in Resources */ = {isa = PBXBuildFile; fileRef = B29AE0E01EA1DBAD0015178B /* shh.m4a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		B29AE0C91EA1CC7C0015178B /* SleepZoneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SleepZoneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B29AE0CD1EA1CC7C0015178B /* SleepZoneUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SleepZoneUITests.m; sourceTree = "<group>"; };
 		B29AE0CF1EA1CC7C0015178B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B29AE0DD1EA1DADA0015178B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		B29AE0E01EA1DBAD0015178B /* shh.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = shh.m4a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B29AE0DE1EA1DADA0015178B /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +92,7 @@
 				B29AE0C11EA1CC7C0015178B /* SleepZoneTests */,
 				B29AE0CC1EA1CC7C0015178B /* SleepZoneUITests */,
 				B29AE0A31EA1CC7C0015178B /* Products */,
+				B29AE0DC1EA1DADA0015178B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +109,7 @@
 		B29AE0A41EA1CC7C0015178B /* SleepZone */ = {
 			isa = PBXGroup;
 			children = (
+				B29AE0DF1EA1DB950015178B /* Assets */,
 				B29AE0A81EA1CC7C0015178B /* AppDelegate.h */,
 				B29AE0A91EA1CC7C0015178B /* AppDelegate.m */,
 				B29AE0AB1EA1CC7C0015178B /* ViewController.h */,
@@ -141,6 +148,22 @@
 				B29AE0CF1EA1CC7C0015178B /* Info.plist */,
 			);
 			path = SleepZoneUITests;
+			sourceTree = "<group>";
+		};
+		B29AE0DC1EA1DADA0015178B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B29AE0DD1EA1DADA0015178B /* AVFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B29AE0DF1EA1DB950015178B /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				B29AE0E01EA1DBAD0015178B /* shh.m4a */,
+			);
+			name = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,6 +273,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B29AE0E11EA1DBF90015178B /* shh.m4a in Resources */,
 				B29AE0B81EA1CC7C0015178B /* LaunchScreen.storyboard in Resources */,
 				B29AE0B51EA1CC7C0015178B /* Assets.xcassets in Resources */,
 				B29AE0B01EA1CC7C0015178B /* Main.storyboard in Resources */,

@@ -7,10 +7,12 @@
 //
 
 #import "ViewController.h"
+#import <AudioToolbox/AudioToolbox.h>
+#import <AVFoundation/AVFoundation.h>
 
 @interface ViewController ()
 
-
+@property (strong, nonatomic) AVAudioPlayer *player;
 @property (weak, nonatomic) IBOutlet UISwitch *shusherSwitch;
 
 
@@ -20,18 +22,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+    NSString *shusherSoundFilePath = [NSString stringWithFormat:@"%@/shh.m4a",[[NSBundle mainBundle] resourcePath]];
+    NSURL *shusherSoundFileURL = [NSURL fileURLWithPath:shusherSoundFilePath];
+    
+    self.player = [[AVAudioPlayer alloc] initWithContentsOfURL:shusherSoundFileURL error:nil];
+    self.player.numberOfLoops = -1;
+    [self.shusherSwitch setOn:NO];
 }
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 
 - (IBAction)shusherSwitchValueChanged:(id)sender {
-    NSLog(@"shusherValue:%d", self.shusherSwitch.isOn);
+    if (self.shusherSwitch.isOn) {
+        [self.player play];
+    } else {
+        [self.player pause];
+    }
 }
 
 @end

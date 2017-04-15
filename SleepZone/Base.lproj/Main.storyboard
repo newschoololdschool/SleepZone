@@ -21,17 +21,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zm9-tI-Sch">
-                                <rect key="frame" x="163" y="318" width="51" height="31"/>
-                                <connections>
-                                    <action selector="shusherSwitchValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="ohc-K4-znP"/>
-                                </connections>
-                            </switch>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Be-YS-75z" userLabel="Container View">
+                                <rect key="frame" x="88" y="234" width="200" height="200"/>
+                                <subviews>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zm9-tI-Sch">
+                                        <rect key="frame" x="75" y="85" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="shusherSwitchValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="ohc-K4-znP"/>
+                                        </connections>
+                                    </switch>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SHHH" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AGn-Ii-apm">
+                                        <rect key="frame" x="0.0" y="127" width="200" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="Zm9-tI-Sch" firstAttribute="centerX" secondItem="AGn-Ii-apm" secondAttribute="centerX" id="5sh-tX-yUj"/>
+                                    <constraint firstItem="AGn-Ii-apm" firstAttribute="leading" secondItem="9Be-YS-75z" secondAttribute="leading" id="G2t-Hi-vbh"/>
+                                    <constraint firstAttribute="height" constant="200" id="RAo-fm-dOF"/>
+                                    <constraint firstAttribute="trailing" secondItem="AGn-Ii-apm" secondAttribute="trailing" id="Yr4-3c-sEU"/>
+                                    <constraint firstItem="Zm9-tI-Sch" firstAttribute="centerY" secondItem="9Be-YS-75z" secondAttribute="centerY" id="ded-Aa-8Qn"/>
+                                    <constraint firstAttribute="width" constant="200" id="qJf-gR-6zH"/>
+                                    <constraint firstItem="AGn-Ii-apm" firstAttribute="top" secondItem="Zm9-tI-Sch" secondAttribute="bottom" constant="11" id="vsR-6O-Weu"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Zm9-tI-Sch" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="2SD-gw-kur"/>
-                            <constraint firstItem="Zm9-tI-Sch" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GNy-Nv-IEs"/>
+                            <constraint firstItem="9Be-YS-75z" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="cR1-dm-XuS"/>
+                            <constraint firstItem="9Be-YS-75z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xc4-gQ-o3S"/>
                         </constraints>
                     </view>
                     <connections>
