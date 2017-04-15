@@ -25,19 +25,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
+    [[AVAudioSession sharedInstance] setActive: YES error: nil];
+    [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
 
     NSString *shusherSoundFilePath = [NSString stringWithFormat:@"%@/shh.m4a",[[NSBundle mainBundle] resourcePath]];
     NSURL *shusherSoundFileURL = [NSURL fileURLWithPath:shusherSoundFilePath];
     
     self.shusherPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:shusherSoundFileURL error:nil];
     self.shusherPlayer.numberOfLoops = -1;
+
     [self.shusherSwitch setOn:NO];
 
     NSString *rainFilePath = [NSString stringWithFormat:@"%@/rain.wav",[[NSBundle mainBundle] resourcePath]];
     NSURL *rainFileURL = [NSURL fileURLWithPath:rainFilePath];
     self.rainPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:rainFileURL error:nil];
     self.rainPlayer.numberOfLoops = -1;
-    [self.rainPlayer setVolume:0.5];
+    [self.rainPlayer setVolume:0.25];
     [self.rainSwitch setOn:NO];
 }
 
