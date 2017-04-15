@@ -12,9 +12,12 @@
 
 @interface ViewController ()
 
-@property (strong, nonatomic) AVAudioPlayer *player;
+@property (strong, nonatomic) AVAudioPlayer *rainPlayer;
+@property (strong, nonatomic) AVAudioPlayer *shusherPlayer;
 @property (weak, nonatomic) IBOutlet UISwitch *shusherSwitch;
 
+@property (weak, nonatomic) IBOutlet UISwitch *rainSwitch;
+- (IBAction)rainSwitchValueChanged:(id)sender;
 
 @end
 
@@ -26,17 +29,31 @@
     NSString *shusherSoundFilePath = [NSString stringWithFormat:@"%@/shh.m4a",[[NSBundle mainBundle] resourcePath]];
     NSURL *shusherSoundFileURL = [NSURL fileURLWithPath:shusherSoundFilePath];
     
-    self.player = [[AVAudioPlayer alloc] initWithContentsOfURL:shusherSoundFileURL error:nil];
-    self.player.numberOfLoops = -1;
+    self.shusherPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:shusherSoundFileURL error:nil];
+    self.shusherPlayer.numberOfLoops = -1;
     [self.shusherSwitch setOn:NO];
+
+    NSString *rainFilePath = [NSString stringWithFormat:@"%@/rain.wav",[[NSBundle mainBundle] resourcePath]];
+    NSURL *rainFileURL = [NSURL fileURLWithPath:rainFilePath];
+    self.rainPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:rainFileURL error:nil];
+    self.rainPlayer.numberOfLoops = -1;
+    [self.rainPlayer setVolume:0.5];
+    [self.rainSwitch setOn:NO];
 }
 
 - (IBAction)shusherSwitchValueChanged:(id)sender {
     if (self.shusherSwitch.isOn) {
-        [self.player play];
+        [self.shusherPlayer play];
     } else {
-        [self.player pause];
+        [self.shusherPlayer pause];
     }
 }
 
+- (IBAction)rainSwitchValueChanged:(id)sender {
+    if (self.rainSwitch.isOn) {
+        [self.rainPlayer play];
+    } else {
+        [self.rainPlayer pause];
+    }
+}
 @end

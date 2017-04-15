@@ -21,42 +21,86 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Be-YS-75z" userLabel="Container View">
-                                <rect key="frame" x="88" y="234" width="200" height="200"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wCJ-E1-AaZ" userLabel="Nav Container View">
+                                <rect key="frame" x="87.5" y="164" width="200" height="403"/>
                                 <subviews>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zm9-tI-Sch">
-                                        <rect key="frame" x="75" y="85" width="51" height="31"/>
-                                        <connections>
-                                            <action selector="shusherSwitchValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="ohc-K4-znP"/>
-                                        </connections>
-                                    </switch>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SHHH" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AGn-Ii-apm">
-                                        <rect key="frame" x="0.0" y="127" width="200" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Be-YS-75z" userLabel="Shh Container View">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                        <subviews>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zm9-tI-Sch">
+                                                <rect key="frame" x="75" y="85" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="shusherSwitchValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="ohc-K4-znP"/>
+                                                </connections>
+                                            </switch>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SHHH" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AGn-Ii-apm">
+                                                <rect key="frame" x="0.0" y="127" width="200" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="Zm9-tI-Sch" firstAttribute="centerX" secondItem="AGn-Ii-apm" secondAttribute="centerX" id="5sh-tX-yUj"/>
+                                            <constraint firstItem="AGn-Ii-apm" firstAttribute="leading" secondItem="9Be-YS-75z" secondAttribute="leading" id="G2t-Hi-vbh"/>
+                                            <constraint firstAttribute="height" constant="200" id="RAo-fm-dOF"/>
+                                            <constraint firstAttribute="trailing" secondItem="AGn-Ii-apm" secondAttribute="trailing" id="Yr4-3c-sEU"/>
+                                            <constraint firstItem="Zm9-tI-Sch" firstAttribute="centerY" secondItem="9Be-YS-75z" secondAttribute="centerY" id="ded-Aa-8Qn"/>
+                                            <constraint firstAttribute="width" constant="200" id="qJf-gR-6zH"/>
+                                            <constraint firstItem="AGn-Ii-apm" firstAttribute="top" secondItem="Zm9-tI-Sch" secondAttribute="bottom" constant="11" id="vsR-6O-Weu"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pAv-ml-dCO" userLabel="Rain Container View">
+                                        <rect key="frame" x="0.0" y="203" width="200" height="200"/>
+                                        <subviews>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TKh-5O-1A1">
+                                                <rect key="frame" x="75" y="85" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="rainSwitchValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="ulr-an-6fk"/>
+                                                    <action selector="shusherSwitchValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Uo1-g2-uy2"/>
+                                                </connections>
+                                            </switch>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RAIN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="su4-db-lVj" userLabel="RAIN">
+                                                <rect key="frame" x="0.0" y="127" width="200" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="su4-db-lVj" secondAttribute="trailing" id="48K-o6-5zV"/>
+                                            <constraint firstItem="TKh-5O-1A1" firstAttribute="centerY" secondItem="pAv-ml-dCO" secondAttribute="centerY" id="6kv-fM-lKk"/>
+                                            <constraint firstAttribute="width" constant="200" id="F4d-WG-cLF"/>
+                                            <constraint firstAttribute="height" constant="200" id="MhO-lR-qpp"/>
+                                            <constraint firstItem="TKh-5O-1A1" firstAttribute="centerX" secondItem="su4-db-lVj" secondAttribute="centerX" id="XdY-nl-qVT"/>
+                                            <constraint firstItem="su4-db-lVj" firstAttribute="leading" secondItem="pAv-ml-dCO" secondAttribute="leading" id="hoE-BM-yyK"/>
+                                            <constraint firstItem="su4-db-lVj" firstAttribute="top" secondItem="TKh-5O-1A1" secondAttribute="bottom" constant="11" id="yyG-5a-P4P"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="Zm9-tI-Sch" firstAttribute="centerX" secondItem="AGn-Ii-apm" secondAttribute="centerX" id="5sh-tX-yUj"/>
-                                    <constraint firstItem="AGn-Ii-apm" firstAttribute="leading" secondItem="9Be-YS-75z" secondAttribute="leading" id="G2t-Hi-vbh"/>
-                                    <constraint firstAttribute="height" constant="200" id="RAo-fm-dOF"/>
-                                    <constraint firstAttribute="trailing" secondItem="AGn-Ii-apm" secondAttribute="trailing" id="Yr4-3c-sEU"/>
-                                    <constraint firstItem="Zm9-tI-Sch" firstAttribute="centerY" secondItem="9Be-YS-75z" secondAttribute="centerY" id="ded-Aa-8Qn"/>
-                                    <constraint firstAttribute="width" constant="200" id="qJf-gR-6zH"/>
-                                    <constraint firstItem="AGn-Ii-apm" firstAttribute="top" secondItem="Zm9-tI-Sch" secondAttribute="bottom" constant="11" id="vsR-6O-Weu"/>
+                                    <constraint firstItem="pAv-ml-dCO" firstAttribute="leading" secondItem="wCJ-E1-AaZ" secondAttribute="leading" id="7lQ-cX-0le"/>
+                                    <constraint firstItem="9Be-YS-75z" firstAttribute="top" secondItem="wCJ-E1-AaZ" secondAttribute="top" id="CWt-2Q-jzT"/>
+                                    <constraint firstAttribute="trailing" secondItem="9Be-YS-75z" secondAttribute="trailing" id="ZK7-bg-PVY"/>
+                                    <constraint firstAttribute="bottom" secondItem="pAv-ml-dCO" secondAttribute="bottom" id="nyk-zj-eke"/>
+                                    <constraint firstAttribute="trailing" secondItem="pAv-ml-dCO" secondAttribute="trailing" id="qQr-tA-v6H"/>
+                                    <constraint firstItem="9Be-YS-75z" firstAttribute="leading" secondItem="wCJ-E1-AaZ" secondAttribute="leading" id="xJi-dv-Qxr"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="9Be-YS-75z" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="cR1-dm-XuS"/>
-                            <constraint firstItem="9Be-YS-75z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xc4-gQ-o3S"/>
+                            <constraint firstItem="wCJ-E1-AaZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4lY-A2-q0g"/>
+                            <constraint firstItem="wCJ-E1-AaZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="cz9-Lp-JSb"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="wCJ-E1-AaZ" secondAttribute="bottom" constant="100" id="rYB-Y7-pBu"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="#SleepZone" id="13x-LA-dIl"/>
                     <connections>
+                        <outlet property="rainSwitch" destination="TKh-5O-1A1" id="uWa-uW-LP1"/>
                         <outlet property="shusherSwitch" destination="Zm9-tI-Sch" id="5xM-m6-08W"/>
                     </connections>
                 </viewController>

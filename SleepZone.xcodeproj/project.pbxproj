@@ -18,6 +18,7 @@
 		B29AE0CE1EA1CC7C0015178B /* SleepZoneUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B29AE0CD1EA1CC7C0015178B /* SleepZoneUITests.m */; };
 		B29AE0DE1EA1DADA0015178B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B29AE0DD1EA1DADA0015178B /* AVFoundation.framework */; };
 		B29AE0E11EA1DBF90015178B /* shh.m4a in Resources */ = {isa = PBXBuildFile; fileRef = B29AE0E01EA1DBAD0015178B /* shh.m4a */; };
+		B29AE0E31EA1E62E0015178B /* rain.wav in Resources */ = {isa = PBXBuildFile; fileRef = B29AE0E21EA1E62E0015178B /* rain.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		B29AE0CF1EA1CC7C0015178B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B29AE0DD1EA1DADA0015178B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		B29AE0E01EA1DBAD0015178B /* shh.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = shh.m4a; sourceTree = "<group>"; };
+		B29AE0E21EA1E62E0015178B /* rain.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = rain.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 		B29AE0DF1EA1DB950015178B /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				B29AE0E21EA1E62E0015178B /* rain.wav */,
 				B29AE0E01EA1DBAD0015178B /* shh.m4a */,
 			);
 			name = Assets;
@@ -273,6 +276,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B29AE0E31EA1E62E0015178B /* rain.wav in Resources */,
 				B29AE0E11EA1DBF90015178B /* shh.m4a in Resources */,
 				B29AE0B81EA1CC7C0015178B /* LaunchScreen.storyboard in Resources */,
 				B29AE0B51EA1CC7C0015178B /* Assets.xcassets in Resources */,
@@ -540,6 +544,7 @@
 				B29AE0D41EA1CC7C0015178B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B29AE0D51EA1CC7C0015178B /* Build configuration list for PBXNativeTarget "SleepZoneTests" */ = {
 			isa = XCConfigurationList;
@@ -548,6 +553,7 @@
 				B29AE0D71EA1CC7C0015178B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B29AE0D81EA1CC7C0015178B /* Build configuration list for PBXNativeTarget "SleepZoneUITests" */ = {
 			isa = XCConfigurationList;
@@ -556,6 +562,7 @@
 				B29AE0DA1EA1CC7C0015178B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
